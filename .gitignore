@@ -1,0 +1,7 @@
+# environment variables
+venv/
+__pycache__/
+.env
+.env.*
+*.pyc
+similarity.pkl

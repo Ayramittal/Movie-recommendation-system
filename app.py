@@ -3,7 +3,10 @@ import requests
 import model
 
 # 🔑 Your TMDB API Key
-API_KEY = "e642054fa032ecb087003fb81e476200"
+import os
+
+api_key = os.getenv("API_KEY")
+
 
 def fetch_poster(movie_id):
     url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={API_KEY}&language=en-US"

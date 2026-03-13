@@ -4,12 +4,14 @@ import model
 
 # 🔑 Your TMDB API Key
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 api_key = os.getenv("API_KEY")
 
-
 def fetch_poster(movie_id):
-    url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={API_KEY}&language=en-US"
+    url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}&language=en-US"
     response = requests.get(url)
     data = response.json()
 
